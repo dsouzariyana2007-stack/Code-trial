@@ -1,1 +1,39 @@
-test
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A colorful gallery of small moments.">
+  <title>Gallery · Hello, World!</title>
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .gallery-page { width: min(94vw, 900px); padding-bottom: 3rem; }
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; text-align: left; }
+    .tile { position: relative; min-height: 170px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; box-shadow: inset 0 1px rgba(255,255,255,.25); transition: transform .25s ease; }
+    .tile:hover { transform: translateY(-5px) rotate(.8deg); }
+    .tile::after { content: ""; position: absolute; width: 150px; height: 150px; right: -35px; bottom: -50px; border-radius: 50%; background: rgba(255,255,255,.16); filter: blur(2px); }
+    .tile span { font-size: .8rem; font-weight: 800; letter-spacing: .12em; opacity: .8; }
+    .tile strong { position: relative; z-index: 1; font-size: 1.45rem; letter-spacing: -.04em; }
+    .sunrise { background: linear-gradient(135deg,#fb7185,#fb923c 54%,#fde68a); color:#4a1830; }
+    .ocean { background: linear-gradient(135deg,#0e7490,#22d3ee 52%,#a5f3fc); color:#083344; }
+    .bloom { background: linear-gradient(135deg,#7c3aed,#d946ef 58%,#f9a8d4); color:#2e1065; }
+    .night { background: linear-gradient(135deg,#111827,#3730a3 55%,#818cf8); color:#eef2ff; }
+    @media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } .tile { min-height: 130px; } }
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <main class="gallery-page">
+    <nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+    <p class="eyebrow">A few bright moments</p>
+    <h1>Little wonders.</h1>
+    <p>Small studies in color, light, and delightful beginnings.</p>
+    <section class="gallery" aria-label="Abstract color gallery">
+      <article class="tile sunrise"><span>01</span><strong>Sunrise</strong></article>
+      <article class="tile ocean"><span>02</span><strong>Tidal</strong></article>
+      <article class="tile bloom"><span>03</span><strong>Bloom</strong></article>
+      <article class="tile night"><span>04</span><strong>Starlight</strong></article>
+    </section>
+  </main>
+</body>
+</html>
