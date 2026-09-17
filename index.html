@@ -95,6 +95,10 @@
       button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 32px rgba(103,232,249,.35); }
       button:focus-visible { outline: 3px solid white; outline-offset: 4px; }
 
+      nav { display: flex; justify-content: center; gap: .45rem; margin: -1.2rem 0 2.8rem; }
+      nav a { padding: .45rem .8rem; border-radius: 999px; color: var(--muted); font-size: .9rem; text-decoration: none; transition: background .2s ease, color .2s ease; }
+      nav a:hover, nav a.active { color: var(--ink); background: rgba(255,255,255,.12); }
+
       .sparkle {
         display: inline-block;
         margin-left: .2em;
@@ -112,6 +116,11 @@
   <body>
     <div class="aurora" aria-hidden="true"></div>
     <main>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <p class="eyebrow">A small beginning</p>
       <h1>Hello, World<span class="sparkle">✦</span></h1>
       <p>Every great idea starts with a single line. This is yours—bright, welcoming, and ready for what comes next.</p>
